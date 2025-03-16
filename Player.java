@@ -14,7 +14,11 @@ public class Player {
         this.score = 0;
     }
 
-    public void describe() {
+    public Player() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void describe() {
         System.out.println("Player: " + name + ", Score: " + score);
         System.out.println("Hand:");
         for (Card card : hand) {
@@ -23,10 +27,10 @@ public class Player {
     }
 
     public Card flip() {
-        if (!hand.isEmpty()) {
+      //  if (!hand.isEmpty()) {
             return hand.remove(0);
-        }
-        return null;
+      //  }
+     //   return null;
     }
 
     public void draw(Deck deck) {
@@ -38,7 +42,27 @@ public class Player {
         }
     }
 
-    public void incrementScore() {
+    public List<Card> getHand() {
+		return hand;
+	}
+
+	public void setHand(List<Card> hand) {
+		this.hand = hand;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void incrementScore() {
         score++;
     }
 

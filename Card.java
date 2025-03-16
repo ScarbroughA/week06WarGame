@@ -13,7 +13,11 @@ class Card {
         this.rank = rank;
     }
 
-    public String getSuit() {
+    public Card() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getSuit() {
         return suit;
     }
 
@@ -28,6 +32,22 @@ class Card {
 
 	public void describe() {
 		
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
 	}
 
 	public static String[] getSuits() {
